@@ -33,5 +33,10 @@ public class Program
         mercedes.Miles = 37979;
 
         List<Car> Cars = new List<Car>() { porsche, ford, lexus, mercedes };
+
+        foreach(Car automobile in Cars)
+        {
+            Console.WriteLine(automobile.MakeModel);
+        }
     }
 }
