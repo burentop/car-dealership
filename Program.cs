@@ -33,13 +33,20 @@ namespace Dealership {
                 }
             }
 
-            foreach (Car automobile in CarsMatchingSearch)
+            if (CarsMatchingSearch.Count < 1)
             {
-                Console.WriteLine("----------------------");
-                Console.WriteLine(automobile.GetMakeModel());
-                Console.WriteLine(automobile.GetMiles() + " miles");
-                Console.WriteLine("$" + automobile.GetPrice());
-                Console.WriteLine(automobile.GetMessage());
+                Console.WriteLine("There are no cars matching your search terms.");
+            }
+            else
+            {
+                foreach (Car automobile in CarsMatchingSearch)
+                {
+                    Console.WriteLine("----------------------");
+                    Console.WriteLine(automobile.GetMakeModel());
+                    Console.WriteLine(automobile.GetMiles() + " miles");
+                    Console.WriteLine("$" + automobile.GetPrice());
+                    Console.WriteLine(automobile.GetMessage());
+                }
             }
         }
     }
