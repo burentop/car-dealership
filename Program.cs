@@ -19,11 +19,15 @@ namespace Dealership {
             string stringMaxPrice = Console.ReadLine();
             int maxPrice = int.Parse(stringMaxPrice);
 
+            Console.WriteLine("Enter maximum mileage: ");
+            string stringMaxMileage = Console.ReadLine();
+            int maxMileage = int.Parse(stringMaxMileage);
+
             List<Car> CarsMatchingSearch = new List<Car>();
 
             foreach (Car automobile in Cars)
             {
-                if (automobile.WorthBuying(maxPrice))
+                if (automobile.WorthBuying(maxPrice, maxMileage))
                 {
                     CarsMatchingSearch.Add(automobile);
                 }
