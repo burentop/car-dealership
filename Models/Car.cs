@@ -24,6 +24,11 @@ namespace Dealership {
             return Price;
         }
 
+        public void SetPrice(int newPrice)
+        {
+            Price = newPrice;
+        }
+
         public int GetMiles()
         {
             return Miles;
